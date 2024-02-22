@@ -33,15 +33,10 @@ export default function Notes() {
 
   const savenote=(e)=>{
     ref.current.click();
-// addNote(note.title, note.desc, note.tags);
-// setNote(e)
-// console.log(note._id)
-// console.log(note.etitle[0])
 updateNotes({_id:note._id, title:note.etitle[0], descreption:note.edescreption, tags:note.etags});
 
   };
   const change=(e)=>{
-    // console.log(notes)
 setNotes({...note, [e.target.name]:[e.target.value]})
 
   }
@@ -71,7 +66,6 @@ setNotes({...note, [e.target.name]:[e.target.value]})
                   <label htmlFor="tags" className="form-label">Title</label>
                   <input type="text" className="form-control" id="tags" value={note.etags} name='etags' onChange={change} placeholder="note tags" />
                 </div>
-                {/* <button className='btn btn-primary px-4' onClick={savenote}>submit</button> */}
               </form>
             </div>
             <div className="modal-footer">
